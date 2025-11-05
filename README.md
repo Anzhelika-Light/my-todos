@@ -1,3 +1,17 @@
+# MY-TODOS
+
+App fro adding, editing and deleting todos. It was made using React, Redux.
+
+Tech task https://docs.google.com/document/d/1Rbou0AS4aGOFXAFP4OWp7EmYV9ujYzyvuQAVaBCENNQ/edit?hl=ru&tab=t.0
+GitHub
+Live page https://my-todos-eta.vercel.app/
+
+## Instructions for installing dependencies and launching the project.
+
+1. Install the project dependencies in the terminal with the npm install command.
+2. Start development mode by running npm run dev.
+3. Go to http://localhost:5173 in your browser. This page will automatically reload after saving changes to the project files.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
