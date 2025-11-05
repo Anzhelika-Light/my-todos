@@ -20,15 +20,13 @@ export default function TodosList({
   total,
   onChangePage,
 }) {
-
   const { notification } = AntdApp.useApp();
 
   const prevTodos = useRef(items);
   const prevPage = useRef(page);
 
   useEffect(() => {
-    console.log(page);
-    if(page !== prevPage.current) {
+    if (page !== prevPage.current) {
       prevPage.current = page;
       return;
     }
@@ -51,7 +49,6 @@ export default function TodosList({
     prevTodos.current = items;
   }, [items, notification, page]);
 
-
   if (!items?.length) return <p>Todos list empty</p>;
 
   return (
@@ -71,16 +68,21 @@ export default function TodosList({
                   Edit
                 </Button>
               ),
-              onToggleCompleted && (<Button
-                key="complete"
-                type={todo.completed ? "default" : "primary"}
-                icon={todo.completed ? <UndoOutlined /> : <CheckOutlined />}
-                onClick={() => onToggleCompleted(todo._id, !todo.completed)}
-              >
-                {todo.completed ? "Mark uncompleted" : "Mark completed"}
-              </Button>),
+              onToggleCompleted && (
+                <Button
+                  key="complete"
+                  type={todo.completed ? "default" : "primary"}
+                  icon={todo.completed ? <UndoOutlined /> : <CheckOutlined />}
+                  onClick={() => onToggleCompleted(todo._id, !todo.completed)}
+                >
+                  {todo.completed ? "Mark uncompleted" : "Mark completed"}
+                </Button>
+              ),
 
-              <Button key="archive" onClick={() => onArchive(todo._id, !todo.archived)}>
+              <Button
+                key="archive"
+                onClick={() => onArchive(todo._id, !todo.archived)}
+              >
                 {todo.archived ? "Restore from archive" : "Add to archive"}
               </Button>,
               <Button
@@ -94,7 +96,7 @@ export default function TodosList({
             ].filter(Boolean)}
           >
             <Text
-              delete={todo.completed} 
+              delete={todo.completed}
               strong={!todo.completed}
               style={{
                 color: todo.completed ? "#8c8c8c" : "#000",
