@@ -3,7 +3,7 @@
 App fro adding, editing and deleting todos. It was made using React, Redux.
 
 Tech task https://docs.google.com/document/d/1Rbou0AS4aGOFXAFP4OWp7EmYV9ujYzyvuQAVaBCENNQ/edit?hl=ru&tab=t.0
-GitHub
+GitHub https://github.com/Anzhelika-Light/my-todos
 Live page https://my-todos-eta.vercel.app/
 
 ## Instructions for installing dependencies and launching the project.
